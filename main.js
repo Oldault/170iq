@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION" ]});
-
+const data = require('./token.json')
 const prefix = '!' ;
 
 const fs = require('fs');
@@ -42,4 +42,4 @@ client.on('message', message =>{
     }
 });
 
-client.login('ODk4ODY1MzY4MDEyMDM0MDQ5.YWqbmw.FEszEzEG9n0uoclk4_6Tpzggqdo');
+client.login(data.token)
